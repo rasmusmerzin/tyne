@@ -41,6 +41,18 @@ const keepValue = (node, key, init, prop = "value") => {
   );
 };
 
+const toggleClass = (node, name) => {
+  const classes = node.className.split(" ").filter((c) => c);
+  const index = classes.indexOf(name);
+  if (index !== -1) classes.splice(index, 1);
+  else classes.push(name);
+  node.className = classes.join(" ");
+};
+
+const toggleStyle = (node, propName, value1, value2 = "initial") => {
+  node.style[propName] = node.style[propName] === value1 ? value2 : value1;
+};
+
 module.exports = {
   attachProps,
   elem,
@@ -48,4 +60,6 @@ module.exports = {
   keepValue,
   root,
   text,
+  toggleClass,
+  toggleStyle,
 };
