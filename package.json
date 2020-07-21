@@ -1,6 +1,6 @@
 {
   "name": "tyne",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "description": "A tiny JavaScript framework for building UI with ease.",
   "main": "tyne.js",
   "repository": {
