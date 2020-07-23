@@ -1,4 +1,8 @@
-const attachProps = (node, props) => {
+export type Props = {
+  [propName: string]: any;
+};
+
+export const attachProps = (node: HTMLElement, props: Props) => {
   for (const key in props) {
     const val = props[key];
     if (
@@ -14,22 +18,32 @@ const attachProps = (node, props) => {
   }
 };
 
-const elem = (type, props, parent) => {
+export const elem = (type: string, props?: Props, parent?: HTMLElement) => {
   const node = document.createElement(type);
   if (props) attachProps(node, props);
   if (parent) parent.appendChild(node);
   return node;
 };
 
-const text = (content, type = "label", parent) =>
+export const text = (content: string, type = "label", parent?: HTMLElement) =>
   elem(type, { innerHTML: content }, parent);
-const group = (children, type = "div", parent) =>
-  elem(type, { children }, parent);
-const root = (children) => {
+
+export const group = (
+  children: HTMLElement[],
+  type = "div",
+  parent?: HTMLElement
+) => elem(type, { children }, parent);
+
+export const root = (children: HTMLElement[]) => {
   for (const child of children) document.body.appendChild(child);
 };
 
-const keepValue = (node, key, init, prop = "value") => {
+export const keepValue = (
+  node: HTMLElement,
+  key: string,
+  init?: any,
+  prop = "value"
+) => {
   const initVal = localStorage.getItem(key);
   if (initVal != undefined) {
     node[prop] = JSON.parse(initVal);
@@ -41,11 +55,11 @@ const keepValue = (node, key, init, prop = "value") => {
   );
 };
 
-const saveValue = (node, key, prop = "value") => {
+export const saveValue = (node: HTMLElement, key: string, prop = "value") => {
   localStorage.setItem(key, JSON.stringify(node[prop]));
 };
 
-const toggleClass = (node, name) => {
+export const toggleClass = (node: HTMLElement, name: string) => {
   const classes = node.className.split(" ").filter((c) => c);
   const index = classes.indexOf(name);
   if (index !== -1) classes.splice(index, 1);
@@ -53,21 +67,11 @@ const toggleClass = (node, name) => {
   node.className = classes.join(" ");
 };
 
-const toggleStyle = (node, propName, value1, value2 = "initial") => {
+export const toggleStyle = (
+  node: HTMLElement,
+  propName: string,
+  value1: string | number,
+  value2: string | number = "initial"
+) => {
   node.style[propName] = node.style[propName] === value1 ? value2 : value1;
-};
-
-module.exports = {
-  attachProps,
-
-  elem,
-  root,
-  text,
-  group,
-
-  keepValue,
-  saveValue,
-
-  toggleClass,
-  toggleStyle,
 };

@@ -1,8 +1,14 @@
 {
   "name": "tyne",
-  "version": "0.1.1-1",
+  "version": "0.2.0-1",
   "description": "A tiny JavaScript framework for building UI with ease.",
-  "main": "tyne.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublish": "yarn clean && yarn build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tynejs/tyne.git"
@@ -12,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tynejs/tyne/issues"
   },
-  "homepage": "https://github.com/tynejs/tyne#readme"
+  "homepage": "https://github.com/tynejs/tyne#readme",
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
 }
