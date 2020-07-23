@@ -41,6 +41,10 @@ const keepValue = (node, key, init, prop = "value") => {
   );
 };
 
+const saveValue = (node, key, prop = "value") => {
+  localStorage.setItem(key, JSON.stringify(node[prop]));
+};
+
 const toggleClass = (node, name) => {
   const classes = node.className.split(" ").filter((c) => c);
   const index = classes.indexOf(name);
@@ -55,11 +59,15 @@ const toggleStyle = (node, propName, value1, value2 = "initial") => {
 
 module.exports = {
   attachProps,
+
   elem,
-  group,
-  keepValue,
   root,
   text,
+  group,
+
+  keepValue,
+  saveValue,
+
   toggleClass,
   toggleStyle,
 };
