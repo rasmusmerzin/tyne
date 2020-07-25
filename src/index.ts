@@ -34,8 +34,11 @@ export const group = (
   parent?: HTMLElement
 ) => elem(type, { children }, parent);
 
-export const select = (options: string[], props?: Props, parent?: HTMLElement) =>
-  elem("select", {
+export const select = (
+  options: string[],
+  props?: Props,
+  parent?: HTMLElement
+) => <HTMLSelectElement>elem("select", {
     ...props,
     children: options.map((method) =>
       elem("option", {
