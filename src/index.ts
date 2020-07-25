@@ -26,7 +26,7 @@ export const elem = (type: string, props?: Props, parent?: HTMLElement) => {
 };
 
 export const text = (content: string, type = "label", parent?: HTMLElement) =>
-  elem(type, { innerHTML: content }, parent);
+  elem(type, { innerText: content }, parent);
 
 export const group = (
   children: HTMLElement[],
@@ -43,7 +43,7 @@ export const select = (
     children: options.map((method) =>
       elem("option", {
         value: method,
-        innerHTML: method,
+        innerText: method,
       })
     ),
   });
