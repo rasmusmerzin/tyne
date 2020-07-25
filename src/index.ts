@@ -34,6 +34,17 @@ export const group = (
   parent?: HTMLElement
 ) => elem(type, { children }, parent);
 
+export const select = (options: string[], props?: Props, parent?: HTMLElement) =>
+  elem("select", {
+    ...props,
+    children: options.map((method) =>
+      elem("option", {
+        value: method,
+        innerHTML: method,
+      })
+    ),
+  });
+
 export const root = (children: HTMLElement[]) => {
   for (const child of children) document.body.appendChild(child);
 };
