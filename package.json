@@ -1,6 +1,6 @@
 {
   "name": "tyne",
-  "version": "0.2.3-3",
+  "version": "0.2.3-4",
   "description": "A tiny JavaScript framework for building UI with minimal overhead.",
   "keywords": [
     "web",
@@ -27,6 +27,6 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash.isequal": "^4.5.0"
   }
 }

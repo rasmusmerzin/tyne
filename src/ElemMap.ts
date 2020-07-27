@@ -4,7 +4,7 @@
 // on update if an element with the same key (deepEqual) is in cache, it is used instead of creating a new one
 // note: cached element will not be updated updated
 
-import { isEqual } from "lodash";
+import isEqual from "lodash.isequal";
 
 interface Cached {
   key: any;
