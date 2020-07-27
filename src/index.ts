@@ -25,7 +25,7 @@ export const elem = (type: string, props?: Props, parent?: HTMLElement) => {
   return node;
 };
 
-export const text = (content: string, type = "label", parent?: HTMLElement) =>
+export const text = (content: string, type = "span", parent?: HTMLElement) =>
   elem(type, { innerText: content }, parent);
 
 export const group = (
