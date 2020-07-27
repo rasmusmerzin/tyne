@@ -73,11 +73,20 @@ export const saveValue = (node: HTMLElement, key: string, prop = "value") => {
   localStorage.setItem(key, JSON.stringify(node[prop]));
 };
 
-export const toggleClass = (node: HTMLElement, name: string) => {
+export const toggleClass = (
+  node: HTMLElement,
+  name: string,
+  state?: boolean
+) => {
   const classes = node.className.split(" ").filter((c) => c);
   const index = classes.indexOf(name);
-  if (index !== -1) classes.splice(index, 1);
-  else classes.push(name);
+  if (state !== undefined) {
+    if (state === false && index !== -1) classes.splice(index, 1);
+    else if (state === true && index === -1) classes.push(name);
+  } else {
+    if (index !== -1) classes.splice(index, 1);
+    else classes.push(name);
+  }
   node.className = classes.join(" ");
 };
 
