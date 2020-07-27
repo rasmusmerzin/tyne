@@ -1,6 +1,6 @@
 {
   "name": "tyne",
-  "version": "0.2.1-5",
+  "version": "0.2.1-6",
   "description": "A tiny JavaScript framework for building UI with minimal overhead.",
   "keywords": [
     "web",

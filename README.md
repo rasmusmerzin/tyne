@@ -34,10 +34,10 @@ _js_
 
 _html_
 
-    <select>
-      <option style="text-transform: uppercase" value="head">head</option>
-      <option style="text-transform: uppercase" value="get">get</option>
-      <option style="text-transform: uppercase" value="post">post</option>
+    <select style="text-transform: uppercase">
+      <option value="head">head</option>
+      <option value="get">get</option>
+      <option value="post">post</option>
     </select>
 
 To add generated element to document...
