@@ -98,3 +98,5 @@ export const toggleStyle = (
 ) => {
   node.style[propName] = node.style[propName] === value1 ? value2 : value1;
 };
+
+export { default as ElemMap } from "./ElemMap";
