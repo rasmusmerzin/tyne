@@ -1,5 +1,8 @@
+<h1 align='center'>
+Use <a href='https://mithril.js.org/'>Mithril.js</a>
+</h1>
 <p align='center'>
-<img alt='Tyne' src='./logo-wordmark.svg' height="96" />
+<img alt='Tyne' src='./logo-wordmark.svg' height="32" />
 </p>
 <p align='center'>
 <a href="https://npmcharts.com/compare/tyne?minimal=true"><img src="https://img.shields.io/npm/dm/tyne.svg?sanitize=true" alt="Downloads"></a>

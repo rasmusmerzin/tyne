@@ -1,6 +1,6 @@
 {
   "name": "tyne",
-  "version": "0.2.3-5",
+  "version": "0.2.3-6",
   "description": "A tiny JavaScript framework for building UI with minimal overhead.",
   "keywords": [
     "web",
@@ -15,14 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tynejs/tyne.git"
+    "url": "git+https://github.com/rasmusmerzin/tyne.git"
   },
   "author": "Emil Rasmus Merzin",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tynejs/tyne/issues"
-  },
-  "homepage": "https://github.com/tynejs/tyne#readme",
+  "homepage": "https://github.com/rasmusmerzin/tyne#readme",
   "devDependencies": {
     "typescript": "^3.9.7"
   },
