@@ -1,6 +1,11 @@
 <h1 align='center'>
-Use <a href='https://mithril.js.org/'>Mithril.js</a>
+Deprecated
 </h1>
+
+<p align='center'>
+I recommend <a href='https://mithril.js.org/'>Mithril.js</a> instead.
+</p>
+
 <p align='center'>
 <img alt='Tyne' src='./logo-wordmark.svg' height="32" />
 </p>
