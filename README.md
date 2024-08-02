@@ -64,4 +64,4 @@ or shorthand version
 ## Example Projects
 
 - [template](https://github.com/tynejs/template)
-- [rest-helper](https://gitlab.com/merzin/rest-helper)
+- [rest-helper](https://github.com/rasmusmerzin/rest-helper)
